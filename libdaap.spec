@@ -1,4 +1,5 @@
-Summary:	Digital Audio Access Protocol
+Summary:	Digital Audio Access Protocol library
+Summary(pl.UTF-8):	Biblioteka obsługująca Digital Audio Access Protocol
 Name:		libdaap
 Version:	0.0.4
 Release:	1
@@ -19,6 +20,13 @@ The Digital Audio Access Protocol, or DAAP, is used by Apple's iTunes
 Internet. It provides capability not only to stream audio from one
 computer to another, but also to list the host's playlists so that
 they can be accessed remotely.
+
+%description -l pl.UTF-8
+Digital Audio Access Protocol (DAAP) jest używany przez odtwarzacz
+muzyki iTunes 4.0 firmy Apple do współdzielenia muzyki w sieci lub
+Intenecie. Daje możliwość nie tylko przesyłania strumienia dźwięku z
+jednego komputera na inny, ale także przekazywania playlist z
+komputera w taki sposób, że mogą być wykorzystywane zdalnie.
 
 %package devel
 Summary:	Header files for DAAP library
@@ -72,7 +80,9 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
-%attr(755,root,root) %{_libdir}/libdaap.so.*
+%attr(755,root,root) %{_libdir}/libdaap.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libdaap.so.?
+
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libdaap.so
